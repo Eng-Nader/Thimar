@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:thimar/auth/login_view.dart';
+import 'package:thimar/core/router/thimar_router.dart';
 
 void main() {
   runApp(
-    const Thimar(),
+     Thimar(thimarRouter:ThimarRouter(),),
   );
 }
 
 class Thimar extends StatelessWidget {
-  const Thimar({super.key});
+  const Thimar({super.key, required this.thimarRouter});
+  final ThimarRouter thimarRouter ; 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: LoginView(),
+      routerConfig: thimarRouter.router,
     );
   }
 }

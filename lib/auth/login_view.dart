@@ -11,6 +11,7 @@ class LoginView extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: Image.asset(
