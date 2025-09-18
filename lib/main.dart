@@ -24,6 +24,10 @@ class Thimar extends StatelessWidget {
           child: child!,
         );
       },
+      theme: ThemeData(
+        fontFamily: 'Tajawal',
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }

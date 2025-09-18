@@ -5,7 +5,7 @@ class ThimarStyle {
   static const styleBold16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    fontFamily: 'Tajawal',
+
     color: ThimarColor.primaryColor,
   );
   static const styleRegular21 = TextStyle(
