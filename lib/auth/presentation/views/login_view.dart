@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thimar/auth/presentation/widget/custom_auth_button.dart';
 import 'package:thimar/auth/presentation/widget/custom_pin_code_filds.dart';
 import 'package:thimar/auth/presentation/widget/custom_thimar_logo.dart';
 import 'package:thimar/core/style/thimar_style.dart';
@@ -13,16 +14,22 @@ class LoginView extends StatelessWidget {
         padding: EdgeInsets.all(16),
         child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               CustomThimarLogo(),
               SizedBox(
                 height: 16,
               ),
 
-              Text(
-                'نسيت كلمة المرور',
-                style: ThimarStyle.styleBold16.copyWith(),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'نسيت كلمة المرور',
+                  style: ThimarStyle.styleBold16.copyWith(),
+                ),
+              ),
+              SizedBox(
+                height: 8,
               ),
               Text.rich(
                 TextSpan(
@@ -57,6 +64,10 @@ class LoginView extends StatelessWidget {
                 height: 25,
               ),
               CustomPinCodeFilds(),
+              SizedBox(
+                height: 30,
+              ),
+              CustomAuthButton(title: 'تأكيد الكود'),
             ],
           ),
         ),
