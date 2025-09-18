@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:thimar/core/constant.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          Image.asset(thimarLogo),
+        ],
+      ),
+    );
   }
 }
