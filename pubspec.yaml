@@ -85,6 +85,7 @@ flutter:
 
       fonts:
         - asset: assets/fonts/Tajawal-Regular.ttf
+          weight: 700    
      
   
   

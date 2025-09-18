@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thimar/core/constant.dart';
+import 'package:thimar/core/style/thimar_style.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -24,6 +25,7 @@ class LoginView extends StatelessWidget {
 
             Text(
               'مرحبا بك مرة أخرى',
+              style: ThimarStyle.styleBold16,
             ),
           ],
         ),
