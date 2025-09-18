@@ -7,10 +7,26 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Image.asset(thimarLogo),
-        ],
+      body: Padding(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Center(
+              child: Image.asset(
+                thimarLogo,
+                height: 200,
+                width: 200,
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+
+            Text(
+              'مرحبا بك مرة أخرى',
+            ),
+          ],
+        ),
       ),
     );
   }
