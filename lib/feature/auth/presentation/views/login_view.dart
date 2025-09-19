@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_auth_button.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_cirecle_count.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_pin_code_filds.dart';
+import 'package:thimar/feature/auth/presentation/widget/custom_resend_button.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
@@ -86,6 +87,12 @@ class LoginView extends StatelessWidget {
                   height: 16,
                 ),
                 CustomCirecleCount(),
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: CustomResendButton(),
+                ),
               ],
             ),
           ),
