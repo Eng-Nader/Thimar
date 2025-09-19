@@ -6,7 +6,6 @@ import 'package:thimar/core/router/thimar_router.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 import 'package:thimar/feature/auth/presentation/widget/cusotm_auth_text_fild.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_auth_button.dart';
-import 'package:thimar/feature/auth/presentation/widget/custom_key_text_fild.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
 import 'package:thimar/feature/auth/presentation/widget/key_and_auth_text_fild.dart';
 
