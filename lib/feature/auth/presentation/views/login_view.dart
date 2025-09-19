@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/constant.dart';
 import 'package:thimar/core/style/thimar_style.dart';
+import 'package:thimar/feature/auth/presentation/widget/cusotm_auth_text_fild.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_key_text_fild.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
+import 'package:thimar/feature/auth/presentation/widget/key_and_auth_text_fild.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -37,9 +40,7 @@ class LoginView extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              Center(
-                child: CustomKeyTextFild(),
-              ),
+              KeyAndAuthTextFild(),
             ],
           ),
         ),
