@@ -15,6 +15,9 @@ class CusotmAuthTextFild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onTapOutside: (_) {
+        FocusManager.instance.primaryFocus!.unfocus();
+      },
       decoration: InputDecoration(
         prefixIcon: Image.asset(
           width: 20.w,
