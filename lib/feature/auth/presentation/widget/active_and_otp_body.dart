@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-import 'package:thimar/core/router/thimar_router.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_auth_button.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_cirecle_count.dart';

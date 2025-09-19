@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:thimar/core/constant.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
 class CusotmAuthTextFild extends StatelessWidget {
