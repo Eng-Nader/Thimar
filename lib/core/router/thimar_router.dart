@@ -1,10 +1,12 @@
 import 'package:go_router/go_router.dart';
+import 'package:thimar/feature/auth/presentation/views/forgert_password_view.dart';
 import 'package:thimar/feature/auth/presentation/views/login_view.dart';
 import 'package:thimar/feature/auth/presentation/views/sing_up_view.dart';
 
 class ThimarRouter {
   static const String login = '/';
   static const String signUp = '/singup';
+  static const String forgerPassword = '/forgetpass';
   final router = GoRouter(
     routes: [
       GoRoute(
@@ -17,6 +19,12 @@ class ThimarRouter {
         path: signUp,
         builder: (context, state) {
           return SingUpView();
+        },
+      ),
+      GoRoute(
+        path: forgerPassword,
+        builder: (context, state) {
+          return ForgertPasswordView();
         },
       ),
     ],

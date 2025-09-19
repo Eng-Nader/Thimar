@@ -60,11 +60,17 @@ class LoginView extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'نسيت كلمة المرور ؟',
-                  style: ThimarStyle.styleLight16,
+                child: TextButton(
+                  onPressed: () {
+                    context.go(ThimarRouter.forgerPassword);
+                  },
+                  child: Text(
+                    'نسيت كلمة المرور ؟',
+                    style: ThimarStyle.styleLight16,
+                  ),
                 ),
               ),
+
               SizedBox(
                 height: 30.h,
               ),
