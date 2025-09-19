@@ -4,14 +4,16 @@ import 'package:thimar/core/color/thimar_color.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
 class CustomCirecleCount extends StatelessWidget {
-  const CustomCirecleCount({super.key});
+  const CustomCirecleCount({super.key, required this.onComplete});
+  final VoidCallback onComplete;
 
   @override
   Widget build(BuildContext context) {
     return CircularCountDownTimer(
+      onComplete: onComplete,
       width: 70,
       height: 70,
-      duration: 100,
+      duration: 5,
       fillColor: ThimarColor.counterColor,
       ringColor: ThimarColor.primaryColor,
       isReverse: true,

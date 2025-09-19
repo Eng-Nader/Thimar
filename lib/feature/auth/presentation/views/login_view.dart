@@ -6,9 +6,15 @@ import 'package:thimar/feature/auth/presentation/widget/custom_resend_button.dar
 import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  bool isActiveTimer = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,13 +92,25 @@ class LoginView extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                CustomCirecleCount(),
+                if (isActiveTimer)
+                  CustomCirecleCount(
+                    onComplete: () {
+                      isActiveTimer = false;
+                      setState(() {});
+                    },
+                  ),
                 SizedBox(
                   height: 20,
                 ),
-                Center(
-                  child: CustomResendButton(),
-                ),
+                if (!isActiveTimer)
+                  Center(
+                    child: CustomResendButton(
+                      onPressed: () {
+                        isActiveTimer = true;
+                        setState(() {});
+                      },
+                    ),
+                  ),
               ],
             ),
           ),
