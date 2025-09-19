@@ -10,8 +10,9 @@ import 'package:thimar/feature/auth/presentation/widget/custom_resend_button.dar
 import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
 
 class ActiveAndOtpBody extends StatefulWidget {
-  const ActiveAndOtpBody({super.key, required this.title});
+  const ActiveAndOtpBody({super.key, required this.title, required this.onPressed});
   final String title;
+  final VoidCallback onPressed ; 
 
   @override
   State<ActiveAndOtpBody> createState() => _ActiveAndOtpBodyState();
@@ -89,9 +90,7 @@ class _ActiveAndOtpBodyState extends State<ActiveAndOtpBody> {
                   title: 'تأكيد الكود',
                   onPressed: codeController.text.length != 4
                       ? null
-                      : () {
-                          context.go(ThimarRouter.createPassword);
-                        },
+                      :  widget.onPressed , 
                 ),
                 SizedBox(
                   height: 20.h,
