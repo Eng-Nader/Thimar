@@ -9,6 +9,7 @@ class ThimarRouter {
   static const String signUp = '/singup';
   static const String forgerPassword = '/forgetpass';
   static const String verfiyOtp = '/otp';
+  static const String createPassword = '/createNewPassword';
   final router = GoRouter(
     routes: [
       GoRoute(
@@ -31,6 +32,12 @@ class ThimarRouter {
       ),
       GoRoute(
         path: verfiyOtp,
+        builder: (context, state) {
+          return VerfiyOtpView();
+        },
+      ),
+      GoRoute(
+        path: createPassword,
         builder: (context, state) {
           return VerfiyOtpView();
         },

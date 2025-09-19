@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:thimar/core/router/thimar_router.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_auth_button.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_cirecle_count.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_pin_code_filds.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_resend_button.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
-
 
 class VerfiyOtpView extends StatefulWidget {
   const VerfiyOtpView({super.key});
@@ -20,8 +21,7 @@ class _VerfiyOtpViewState extends State<VerfiyOtpView> {
   TextEditingController codeController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return 
-       Scaffold(
+    return Scaffold(
       resizeToAvoidBottomInset: true,
       body: Padding(
         padding: EdgeInsets.all(20.r),
@@ -87,7 +87,11 @@ class _VerfiyOtpViewState extends State<VerfiyOtpView> {
                 ),
                 CustomAuthButton(
                   title: 'تأكيد الكود',
-                  onPressed: codeController.text.length != 4 ? null : () {},
+                  onPressed: codeController.text.length != 4
+                      ? null
+                      : () {
+                          context.go(ThimarRouter.createPassword);
+                        },
                 ),
                 SizedBox(
                   height: 20.h,
@@ -128,7 +132,5 @@ class _VerfiyOtpViewState extends State<VerfiyOtpView> {
         ),
       ),
     );
-
-
   }
 }
