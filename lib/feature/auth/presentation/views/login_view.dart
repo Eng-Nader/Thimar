@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:thimar/auth/presentation/widget/custom_auth_button.dart';
-import 'package:thimar/auth/presentation/widget/custom_pin_code_filds.dart';
-import 'package:thimar/auth/presentation/widget/custom_thimar_logo.dart';
+import 'package:thimar/feature/auth/presentation/widget/custom_auth_button.dart';
+import 'package:thimar/feature/auth/presentation/widget/custom_pin_code_filds.dart';
+import 'package:thimar/feature/auth/presentation/widget/custom_thimar_logo.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
 class LoginView extends StatelessWidget {
@@ -68,6 +68,17 @@ class LoginView extends StatelessWidget {
                 height: 30,
               ),
               CustomAuthButton(title: 'تأكيد الكود'),
+              SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  textAlign: TextAlign.center,
+                  'لم تستلم الكود ؟\n يمكنك إعادة إرسال الكود بعد',
+                  style: ThimarStyle.styleLight16,
+                ),
+              ),
             ],
           ),
         ),
