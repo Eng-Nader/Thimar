@@ -1,4 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:thimar/feature/auth/presentation/views/active_account_view.dart';
+import 'package:thimar/feature/auth/presentation/views/create_new_password_view.dart';
 import 'package:thimar/feature/auth/presentation/views/forgert_password_view.dart';
 import 'package:thimar/feature/auth/presentation/views/login_view.dart';
 import 'package:thimar/feature/auth/presentation/views/sing_up_view.dart';
@@ -10,6 +12,7 @@ class ThimarRouter {
   static const String forgerPassword = '/forgetpass';
   static const String verfiyOtp = '/otp';
   static const String createPassword = '/createNewPassword';
+  static const String activeaccount = '/acctieAccount';
   final router = GoRouter(
     routes: [
       GoRoute(
@@ -39,7 +42,13 @@ class ThimarRouter {
       GoRoute(
         path: createPassword,
         builder: (context, state) {
-          return VerfiyOtpView();
+          return CreateNewPasswordView();
+        },
+      ),
+      GoRoute(
+        path: activeaccount,
+        builder: (context, state) {
+          return ActiveAccountView();
         },
       ),
     ],
