@@ -1,31 +1,32 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/color/thimar_color.dart';
 
 class ThimarStyle {
-  static const styleBold16 = TextStyle(
-    fontSize: 16,
+  static TextStyle styleBold16 = TextStyle(
+    fontSize: 16.sp,
     fontWeight: FontWeight.w700,
 
     color: ThimarColor.primaryColor,
   );
-  static const styleRegular21 = TextStyle(
-    fontSize: 21,
+  static TextStyle styleRegular21 = TextStyle(
+    fontSize: 21.sp,
     fontWeight: FontWeight.w400,
 
     color: ThimarColor.primaryColor,
   );
-  static const styleLight16 = TextStyle(
-    fontSize: 16,
+  static TextStyle styleLight16 = TextStyle(
+    fontSize: 16.sp,
     fontWeight: FontWeight.w300,
     color: ThimarColor.secondColor,
   );
-  static const styleRegular15 = TextStyle(
-    fontSize: 15,
+  static TextStyle styleRegular15 = TextStyle(
+    fontSize: 15.sp,
     fontWeight: FontWeight.w400,
     color: ThimarColor.thirdColor,
   );
-  static const styleBold15 = TextStyle(
-    fontSize: 15,
+  static TextStyle styleBold15 = TextStyle(
+    fontSize: 15.sp,
     fontWeight: FontWeight.w700,
     color: Color(0xffFFFFFF),
   );

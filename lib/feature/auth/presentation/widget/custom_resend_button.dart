@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/color/thimar_color.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
@@ -15,7 +16,7 @@ class CustomResendButton extends StatelessWidget {
           color: ThimarColor.primaryColor,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
         ),
       ),
       onPressed:  onPressed , 

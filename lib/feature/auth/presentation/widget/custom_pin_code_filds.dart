@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:thimar/core/color/thimar_color.dart';
 
 class CustomPinCodeFilds extends StatelessWidget {
-  const CustomPinCodeFilds({super.key});
-
+  const CustomPinCodeFilds({
+    super.key,
+    required this.textEditingController,
+    required this.onChange,
+  });
+  final TextEditingController textEditingController;
+  final ValueChanged<String> onChange;
   @override
   Widget build(BuildContext context) {
     return PinCodeTextField(
+      onChanged: onChange,
+      controller: textEditingController,
       inputFormatters: [
         FilteringTextInputFormatter.digitsOnly,
       ],
@@ -23,8 +31,8 @@ class CustomPinCodeFilds extends StatelessWidget {
         activeFillColor: ThimarColor.primaryColor,
         selectedFillColor: ThimarColor.primaryColor,
         inactiveFillColor: Colors.white,
-        fieldHeight: 60,
-        fieldWidth: 70,
+        fieldHeight: 60.h,
+        fieldWidth: 70.w,
         borderRadius: BorderRadius.circular(16),
         selectedBorderWidth: 0,
         activeBorderWidth: 0,

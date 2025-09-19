@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_auth_button.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_cirecle_count.dart';
 import 'package:thimar/feature/auth/presentation/widget/custom_pin_code_filds.dart';
@@ -15,12 +16,13 @@ class LoginView extends StatefulWidget {
 
 class _LoginViewState extends State<LoginView> {
   bool isActiveTimer = true;
+  TextEditingController codeController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(20.r),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -28,7 +30,7 @@ class _LoginViewState extends State<LoginView> {
               children: [
                 CustomThimarLogo(),
                 SizedBox(
-                  height: 16,
+                  height: 16.h,
                 ),
 
                 Align(
@@ -39,14 +41,13 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
                 SizedBox(
-                  height: 8,
+                  height: 8.h,
                 ),
                 Text.rich(
                   TextSpan(
                     children: [
                       TextSpan(
-                        text:
-                            'أدخل الكود المكون من 4 أرقام المرسل علي رقم الجوال',
+                        text: 'أدخل الكود المكون من 4 أرقام المرسل علي رقم ',
                         style: ThimarStyle.styleLight16,
                       ),
                       WidgetSpan(
@@ -71,15 +72,23 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 25.h,
                 ),
-                CustomPinCodeFilds(),
-                SizedBox(
-                  height: 30,
+                CustomPinCodeFilds(
+                  textEditingController: codeController,
+                  onChange: (value) {
+                    setState(() {});
+                  },
                 ),
-                CustomAuthButton(title: 'تأكيد الكود'),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
+                ),
+                CustomAuthButton(
+                  title: 'تأكيد الكود',
+                  onPressed: codeController.text.length != 4 ? null : () {},
+                ),
+                SizedBox(
+                  height: 20.h,
                 ),
                 Align(
                   alignment: Alignment.center,
@@ -90,19 +99,19 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
                 SizedBox(
-                  height: 16,
+                  height: 16.h,
                 ),
                 if (isActiveTimer)
-                  CustomCirecleCount(
-                    onComplete: () {
-                      isActiveTimer = false;
-                      setState(() {});
-                    },
-                  ),
-                SizedBox(
-                  height: 20,
-                ),
-                if (!isActiveTimer)
+                  Padding(
+                    padding: EdgeInsets.only(top: 16.h),
+                    child: CustomCirecleCount(
+                      onComplete: () {
+                        isActiveTimer = false;
+                        setState(() {});
+                      },
+                    ),
+                  )
+                else
                   Center(
                     child: CustomResendButton(
                       onPressed: () {

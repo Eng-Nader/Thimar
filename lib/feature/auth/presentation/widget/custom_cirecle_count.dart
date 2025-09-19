@@ -1,5 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/color/thimar_color.dart';
 import 'package:thimar/core/style/thimar_style.dart';
 
@@ -11,8 +12,8 @@ class CustomCirecleCount extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircularCountDownTimer(
       onComplete: onComplete,
-      width: 70,
-      height: 70,
+      width: 70.w,
+      height: 70.h,
       duration: 5,
       fillColor: ThimarColor.counterColor,
       ringColor: ThimarColor.primaryColor,

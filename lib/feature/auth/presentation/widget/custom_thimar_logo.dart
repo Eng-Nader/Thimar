@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/constant.dart';
 
 class CustomThimarLogo extends StatelessWidget {
@@ -9,8 +10,8 @@ class CustomThimarLogo extends StatelessWidget {
     return Center(
       child: Image.asset(
         thimarLogo,
-        height: 140,
-        width: 140,
+        height: 140.h,
+        width: 140.w,
       ),
     );
   }
