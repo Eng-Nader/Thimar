@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thimar/core/constant.dart';
+import 'package:thimar/core/style/thimar_style.dart';
 
 class CustomKeyTextFild extends StatelessWidget {
   const CustomKeyTextFild({super.key});
@@ -12,15 +12,29 @@ class CustomKeyTextFild extends StatelessWidget {
       height: 60.h,
       width: 70.h,
       decoration: BoxDecoration(
-        color: Colors.red,
+        border: BoxBorder.all(
+          color: Color(0xfff3f3f3),
+        ),
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Column(
-        children: [
-          SvgPicture.asset(
-            saudiFlag,
-          ),
-        ],
+      child: Padding(
+        padding: EdgeInsets.only(top: 8.h),
+        child: Column(
+          children: [
+            Image.asset(
+              saudiFlag,
+              height: 20.h,
+              width: 32.h,
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            Text(
+              '+966',
+              style: ThimarStyle.styleBold16,
+            ),
+          ],
+        ),
       ),
     );
   }
